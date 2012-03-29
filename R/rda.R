@@ -28,3 +28,24 @@ function(val, ...)
     
     fromJSON(val, asText = TRUE)
 }
+
+
+XMLHandler =
+function(val, ...)
+{
+   xmlParse(val, asText = TRUE)
+}
+
+HTMLHandler =
+function(val, ...)
+{
+   htmlParse(val, asText = TRUE)
+}
+
+zipHandler =
+   # Or use Rcompression
+function(val, ...)
+{
+   unzip(val, unzip = "internal")
+}
+
